@@ -21,8 +21,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 
 
@@ -30,9 +30,10 @@
 
     <!-- NAVIGATION -->
 
+    <header class="site-header">
     <nav>
 
-        <div class="logo">BB</div>
+        <a href="#top" class="logo">BB</a>
 
         <div class="nav-links">
             <a href="#about">About</a>
@@ -43,42 +44,54 @@
         </div>
 
     </nav>
+    </header>
 
 
-    <main>
+    <main id="top">
 
 
         <!-- HERO -->
 
         <section class="hero">
 
-            <p class="eyebrow">
-                DATA ANALYTICS · DENISON UNIVERSITY
-            </p>
+            <div class="hero-copy">
 
-            <h1>
-                Hi, I'm Ben Bevill.
-            </h1>
+                <h1>Ben Bevill</h1>
 
-            <p class="hero-text">
-                I use data to understand why things happen,
-                solve problems, and help make better decisions.
-            </p>
+                <p class="hero-text">
+                    Data Analytics student at Denison University and
+                    NCAA Division III swimmer. I use data to understand
+                    why things happen and help people make better decisions.
+                </p>
 
-            <div class="hero-buttons">
+                <div class="hero-buttons">
+                    <a href="#projects" class="primary-button">See my projects</a>
+                    <a href="#contact" class="secondary-button">Get in touch</a>
+                </div>
 
-                <a
-                    href="#projects"
-                    class="primary-button"
-                >
-                    View My Work
+            </div>
+
+
+            <!-- Results board: one lane per project -->
+
+            <div class="board" aria-label="Project highlights">
+
+                <a class="lane" href="mccallie.html">
+                    <span class="lane-no" aria-hidden="true">1</span>
+                    <span class="lane-stat">7,200+</span>
+                    <span class="lane-label">force-plate jumps turned into coaching benchmarks</span>
                 </a>
 
-                <a
-                    href="#contact"
-                    class="secondary-button"
-                >
-                    Contact Me
+                <a class="lane" href="swimming.html">
+                    <span class="lane-no" aria-hidden="true">2</span>
+                    <span class="lane-stat">467</span>
+                    <span class="lane-label">NCAA championship swims modeled with logistic regression</span>
+                </a>
+
+                <a class="lane" href="swimming.html">
+                    <span class="lane-no" aria-hidden="true">3</span>
+                    <span class="lane-stat">0.887</span>
+                    <span class="lane-label">AUC predicting who scores at nationals from seed rank</span>
                 </a>
 
             </div>
@@ -87,17 +100,11 @@
 
 
 
-        <!--  -->
+        <!-- ABOUT -->
 
         <section id="about">
 
-            <p class="section-label">
-                ABOUT
-            </p>
-
-            <h2>
-                A little about me.
-            </h2>
+            <h2>A little about me</h2>
 
             <p>
                 I'm a Data Analytics student at Denison University
@@ -109,7 +116,7 @@
 
             <p>
                 Outside the classroom, I'm a member of Denison's
-                Men's Swimming & Diving Team. Balancing academics
+                Men's Swimming &amp; Diving Team. Balancing academics
                 and collegiate athletics has taught me discipline,
                 teamwork, leadership, and how to perform in
                 high-pressure environments.
@@ -121,20 +128,14 @@
 
         <!-- SKILLS -->
 
-        <section id="skills">
+        <section id="skills" class="band band-light">
 
-            <p class="section-label">
-                SKILLS
-            </p>
-
-            <h2>
-                What I work with.
-            </h2>
+            <h2>What I work with</h2>
 
             <div class="skills-grid">
 
                 <div class="skill-group">
-                    <h3>Languages &amp; Libraries</h3>
+                    <h3>Languages &amp; libraries</h3>
                     <div class="skills">
                         <span>R</span>
                         <span>tidyverse</span>
@@ -147,7 +148,7 @@
                 </div>
 
                 <div class="skill-group">
-                    <h3>Analytical Methods</h3>
+                    <h3>Analytical methods</h3>
                     <div class="skills">
                         <span>Regression</span>
                         <span>Logistic Regression</span>
@@ -161,7 +162,7 @@
                 </div>
 
                 <div class="skill-group">
-                    <h3>Data Skills</h3>
+                    <h3>Data skills</h3>
                     <div class="skills">
                         <span>Data Cleaning</span>
                         <span>Data Transformation</span>
@@ -193,226 +194,207 @@
 
         <section id="projects">
 
-            <p class="section-label">
-                PROJECTS
-            </p>
-
-            <h2>
-                Featured work.
-            </h2>
+            <h2>Featured work</h2>
 
 
             <!-- MCCALLIE PROJECT -->
 
-            <article class="project-card">
+            <article class="project-row">
 
-                <p class="project-number">
-                    01
-                </p>
+                <a href="mccallie.html" class="project-thumb">
+                    <img
+                        src="images/RelativeForceNorms.png"
+                        alt="Color-coded chart of relative propulsive force norms by jump height"
+                        loading="lazy"
+                    >
+                </a>
 
-                <h3>
-                    Jump Performance & Force Analysis
-                </h3>
+                <div class="project-body">
 
-                <p class="project-company">
-                    McCallie School Strength & Conditioning
-                </p>
+                    <h3>
+                        <a href="mccallie.html">Jump Performance &amp; Force Analysis</a>
+                    </h3>
 
-                <p>
-                    Analyzed more than 7,200 athlete performance
-                    records to study relationships between jump
-                    height and relative propulsive force. Developed
-                    statistical benchmarks and visualizations to
-                    help coaches evaluate performance and make
-                    informed training decisions.
-                </p>
+                    <p class="project-company">
+                        McCallie School Strength &amp; Conditioning
+                    </p>
 
-                <p class="project-result">
-                    <strong>r = 0.689</strong> correlation between relative force and jump height across 7,200+ jumps
-                </p>
+                    <p>
+                        Analyzed more than 7,200 athlete performance
+                        records to study relationships between jump
+                        height and relative propulsive force. Developed
+                        statistical benchmarks and visualizations to
+                        help coaches evaluate performance and make
+                        informed training decisions.
+                    </p>
 
-                <div class="skills">
+                    <p class="project-result">
+                        <strong>r = 0.689</strong> correlation between relative force and jump height across 7,200+ jumps
+                    </p>
 
-                    <span>R</span>
-                    <span>Statistical Analysis</span>
-                    <span>Bootstrapping</span>
-                    <span>Data Visualization</span>
+                    <div class="skills">
+                        <span>R</span>
+                        <span>Statistical Analysis</span>
+                        <span>Bootstrapping</span>
+                        <span>Data Visualization</span>
+                    </div>
+
+                    <a href="mccallie.html" class="project-link">Read the case study</a>
 
                 </div>
 
-                <a
-                    href="mccallie.html"
-                    class="project-link"
-                >
-                    View Project →
+            </article>
+
+
+            <!-- NCAA SWIMMING PROJECT -->
+
+            <article class="project-row">
+
+                <a href="swimming.html" class="project-thumb">
+                    <img
+                        src="images/prob_scoring.png"
+                        alt="Bar chart of NCAA scoring probability by seed range"
+                        loading="lazy"
+                    >
                 </a>
+
+                <div class="project-body">
+
+                    <h3>
+                        <a href="swimming.html">NCAA Championship Performance Analysis</a>
+                    </h3>
+
+                    <p class="project-company">
+                        Independent data analytics project
+                    </p>
+
+                    <p>
+                        Analyzed 467 swimmer-event performances from the 2025
+                        NCAA Division III Men's Swimming Championships to study
+                        how seed rankings relate to championship performance
+                        and scoring. Built and evaluated a logistic regression
+                        model to estimate scoring probability.
+                    </p>
+
+                    <p class="project-result">
+                        <strong>AUC 0.887</strong> for predicting NCAA scorers from seed rank
+                    </p>
+
+                    <div class="skills">
+                        <span>R</span>
+                        <span>Logistic Regression</span>
+                        <span>Classification</span>
+                        <span>ROC/AUC</span>
+                        <span>Data Visualization</span>
+                    </div>
+
+                    <a href="swimming.html" class="project-link">Read the case study</a>
+
+                </div>
 
             </article>
 
 
             <!-- TERRORISM DATASET PROJECT -->
-            
-            <article class="project-card">
-            
-                <p class="project-number">
-                    02
-                </p>
-            
-                <h3>
-                    Terrorism Dataset Analysis
-                </h3>
-            
-                <p class="project-company">
-                    Denison University
-                </p>
-            
-                <p>
-                    Analyzed 186 offender records to examine characteristics,
-                    behaviors, and attack patterns among lone offender terrorists
-                    and mass murderers. Used statistical testing, regression,
-                    and visualization to identify and communicate key findings.
-                </p>
-            
-                <p class="project-result">
-                    <strong>p = 0.74</strong> no evidence military experience predicts casualties, a null result reported honestly
-                </p>
 
-                <div class="skills">
-            
-                    <span>R</span>
-                    <span>Data Wrangling</span>
-                    <span>Regression</span>
-                    <span>ANOVA</span>
-                    <span>Chi-Square</span>
-            
-                </div>
-            
-                <a
-                    href="terrorism.html"
-                    class="project-link"
-                >
-                    View Project →
+            <article class="project-row">
+
+                <a href="terrorism.html" class="project-thumb">
+                    <img
+                        src="images/Attack types by offender type.png"
+                        alt="Chart of attack types by offender type"
+                        loading="lazy"
+                    >
                 </a>
-            
+
+                <div class="project-body">
+
+                    <h3>
+                        <a href="terrorism.html">Terrorism Dataset Analysis</a>
+                    </h3>
+
+                    <p class="project-company">
+                        Denison University
+                    </p>
+
+                    <p>
+                        Analyzed 186 offender records to examine characteristics,
+                        behaviors, and attack patterns among lone offender terrorists
+                        and mass murderers. Used statistical testing, regression,
+                        and visualization to identify and communicate key findings.
+                    </p>
+
+                    <p class="project-result">
+                        <strong>p = 0.74</strong> no evidence military experience predicts casualties, a null result reported honestly
+                    </p>
+
+                    <div class="skills">
+                        <span>R</span>
+                        <span>Data Wrangling</span>
+                        <span>Regression</span>
+                        <span>ANOVA</span>
+                        <span>Chi-Square</span>
+                    </div>
+
+                    <a href="terrorism.html" class="project-link">Read the case study</a>
+
+                </div>
+
             </article>
-
-        <!-- NCAA SWIMMING PROJECT -->
-        
-        <article class="project-card">
-        
-            <p class="project-number">
-                03
-            </p>
-        
-            <h3>
-                NCAA Championship Performance Analysis
-            </h3>
-        
-            <p class="project-company">
-                Independent Data Analytics Project
-            </p>
-        
-            <p>
-                Analyzed 467 swimmer-event performances from the 2025
-                NCAA Division III Men's Swimming Championships to study
-                how seed rankings relate to championship performance
-                and scoring. Built and evaluated a logistic regression
-                model to estimate scoring probability.
-            </p>
-        
-            <p class="project-result">
-                <strong>AUC 0.887</strong> for predicting NCAA scorers from seed rank
-            </p>
-
-            <div class="skills">
-        
-                <span>R</span>
-                <span>Logistic Regression</span>
-                <span>Classification</span>
-                <span>ROC/AUC</span>
-                <span>Data Visualization</span>
-        
-            </div>
-        
-            <a
-                href="swimming.html"
-                class="project-link"
-            >
-                View Project →
-            </a>
-        
-        </article>
 
         </section>
 
 
+
         <!-- EXPERIENCE & LEADERSHIP -->
 
-        <section id="experience">
+        <section id="experience" class="band band-deep">
 
-            <p class="section-label">
-                EXPERIENCE & LEADERSHIP
-            </p>
-
-            <h2>
-                Beyond the classroom.
-            </h2>
-
+            <h2>Beyond the classroom</h2>
 
             <div class="experience-item">
-
-                <h3>
-                    Denison Men's Swimming & Diving
-                </h3>
-
-                <p>
-                    Varsity Student-Athlete
-                </p>
-
-                <p>
-                    Member of Denison's back-to-back NCAA
-                    Division III National Championship teams
-                    in 2025 and 2026.
-                </p>
-
+                <div class="experience-role">
+                    <h3>Denison Men's Swimming &amp; Diving</h3>
+                    <p>Varsity student-athlete</p>
+                </div>
+                <div class="experience-detail">
+                    <p>
+                        Member of Denison's back-to-back NCAA Division III
+                        National Championship teams.
+                    </p>
+                    <div class="titles">
+                        <span>2025 national champions</span>
+                        <span>2026 national champions</span>
+                    </div>
+                </div>
             </div>
 
-
             <div class="experience-item">
-
-                <h3>
-                    Radical Hope Leader
-                </h3>
-
-                <p>
-                    Men's Swimming & Diving Team
-                </p>
-
-                <p>
-                    Selected to help strengthen team culture,
-                    build connections among teammates, and
-                    support a positive team environment.
-                </p>
-
+                <div class="experience-role">
+                    <h3>Radical Hope Leader</h3>
+                    <p>Men's Swimming &amp; Diving Team</p>
+                </div>
+                <div class="experience-detail">
+                    <p>
+                        Selected to help strengthen team culture,
+                        build connections among teammates, and
+                        support a positive team environment.
+                    </p>
+                </div>
             </div>
 
-
             <div class="experience-item">
-
-                <h3>
-                    Student-Athlete Advisory Committee
-                </h3>
-
-                <p>
-                    Men's Swimming & Diving Representative
-                </p>
-
-                <p>
-                    Represent the team while contributing to
-                    student-athlete initiatives and discussions
-                    across campus.
-                </p>
-
+                <div class="experience-role">
+                    <h3>Student-Athlete Advisory Committee</h3>
+                    <p>Men's Swimming &amp; Diving representative</p>
+                </div>
+                <div class="experience-detail">
+                    <p>
+                        Represent the team while contributing to
+                        student-athlete initiatives and discussions
+                        across campus.
+                    </p>
+                </div>
             </div>
 
         </section>
@@ -423,13 +405,7 @@
 
         <section id="contact">
 
-            <p class="section-label">
-                CONTACT
-            </p>
-
-            <h2>
-                Let's connect.
-            </h2>
+            <h2>Let's connect</h2>
 
             <p>
                 I'm currently interested in opportunities involving
@@ -437,23 +413,15 @@
                 problem solving.
             </p>
 
-
             <div class="contact-links">
 
-                <a href="mailto:bevill_b1@denison.edu">
-                    Email Me
-                </a>
-
-                <a
-                    href="https://github.com/Ben-Bevill05"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    GitHub
+                <a href="mailto:bevill_b1@denison.edu" class="primary-button">
+                    Email me
                 </a>
 
                 <a
                     href="https://www.linkedin.com/in/ben-bevill-5a9190331/"
+                    class="secondary-button"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -461,11 +429,21 @@
                 </a>
 
                 <a
-                    href="Ben_Bevill_Resume.pdf"
+                    href="https://github.com/Ben-Bevill05"
+                    class="secondary-button"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Resume
+                    GitHub
+                </a>
+
+                <a
+                    href="Ben_Bevill_Resume.pdf"
+                    class="secondary-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Resume (PDF)
                 </a>
 
             </div>
@@ -480,11 +458,7 @@
     <!-- FOOTER -->
 
     <footer>
-
-        <p>
-            © 2026 Ben Bevill
-        </p>
-
+        <p>© 2026 Ben Bevill</p>
     </footer>
 
 
