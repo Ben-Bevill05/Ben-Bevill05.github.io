@@ -895,11 +895,12 @@ html {
 }
 
 .hero h1 {
-    font-size: clamp(56px, 7.4vw, 96px);
+    font-size: clamp(44px, 6.4vw, 86px);
     font-weight: 900;
-    font-stretch: 125%;
-    font-variation-settings: "wdth" 125;
+    font-stretch: 112%;
+    font-variation-settings: "wdth" 112;
     letter-spacing: -3px;
+    overflow-wrap: anywhere;
     line-height: 0.92;
     margin-bottom: 26px;
 }
@@ -1294,7 +1295,8 @@ html {
     }
 
     .hero h1 {
-        letter-spacing: -2px;
+        font-size: 44px;
+        letter-spacing: -1.5px;
     }
 }
 
