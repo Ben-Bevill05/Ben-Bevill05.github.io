@@ -885,13 +885,13 @@ html {
 /* ---------- HERO + RESULTS BOARD ---------- */
 
 .hero {
-    min-height: min(76vh, 720px);
+    min-height: 0;
     max-width: none;
     display: grid;
     grid-template-columns: 1.05fr 1fr;
     gap: 64px;
     align-items: center;
-    padding: 32px 0 56px;
+    padding: 72px 0 40px;
 }
 
 .hero h1 {
@@ -1297,4 +1297,9 @@ html {
     html {
         scroll-behavior: auto;
     }
+}
+
+/* Pull About closer to the hero */
+#about {
+    padding-top: 48px;
 }
