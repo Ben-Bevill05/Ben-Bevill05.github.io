@@ -12,6 +12,9 @@
         content="Portfolio of Ben Bevill, a Data Analytics student at Denison University."
     >
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -26,6 +29,7 @@
 
         <div class="nav-links">
             <a href="#about">About</a>
+            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
@@ -108,6 +112,76 @@
 
 
 
+        <!-- SKILLS -->
+
+        <section id="skills">
+
+            <p class="section-label">
+                SKILLS
+            </p>
+
+            <h2>
+                What I work with.
+            </h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-group">
+                    <h3>Languages &amp; Libraries</h3>
+                    <div class="skills">
+                        <span>R</span>
+                        <span>tidyverse</span>
+                        <span>ggplot2</span>
+                        <span>Python</span>
+                        <span>pandas</span>
+                        <span>SQL</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Analytical Methods</h3>
+                    <div class="skills">
+                        <span>Regression</span>
+                        <span>Logistic Regression</span>
+                        <span>Hypothesis Testing</span>
+                        <span>ANOVA</span>
+                        <span>Chi-Square</span>
+                        <span>T-Tests</span>
+                        <span>Bootstrapping</span>
+                        <span>ROC/AUC</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Data Skills</h3>
+                    <div class="skills">
+                        <span>Data Cleaning</span>
+                        <span>Data Transformation</span>
+                        <span>Statistical Analysis</span>
+                        <span>Relational Databases</span>
+                        <span>Data Visualization</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Tools</h3>
+                    <div class="skills">
+                        <span>RStudio</span>
+                        <span>Quarto</span>
+                        <span>Jupyter</span>
+                        <span>VS Code</span>
+                        <span>GitHub</span>
+                        <span>Excel</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
         <!-- PROJECTS -->
 
         <section id="projects">
@@ -144,6 +218,10 @@
                     statistical benchmarks and visualizations to
                     help coaches evaluate performance and make
                     informed training decisions.
+                </p>
+
+                <p class="project-result">
+                    <strong>r = 0.689</strong> correlation between relative force and jump height across 7,200+ jumps
                 </p>
 
                 <div class="skills">
@@ -188,6 +266,10 @@
                     and visualization to identify and communicate key findings.
                 </p>
             
+                <p class="project-result">
+                    <strong>186</strong> offender records analyzed with regression, ANOVA, and chi-square tests
+                </p>
+
                 <div class="skills">
             
                     <span>R</span>
@@ -231,6 +313,10 @@
                 model to estimate scoring probability.
             </p>
         
+            <p class="project-result">
+                <strong>AUC 0.887</strong> for predicting NCAA scorers from seed rank
+            </p>
+
             <div class="skills">
         
                 <span>R</span>

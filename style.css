@@ -757,3 +757,77 @@ footer {
     }
 
 }
+
+
+/* =========================================================
+   TYPOGRAPHY · SKILLS · PROJECT RESULTS · CODE LINKS
+   ========================================================= */
+
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: "Inter Tight", "Inter", Arial, sans-serif;
+}
+
+/* Key result line on homepage project cards */
+
+.project-card > p.project-result {
+    display: inline-block;
+    margin: 6px 0 4px;
+    padding: 8px 14px;
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.project-result strong {
+    color: var(--accent);
+    font-weight: 800;
+    margin-right: 4px;
+}
+
+/* Skills section */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.skill-group {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
+}
+
+.skill-group h3 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.skill-group .skills {
+    margin-top: 16px;
+}
+
+/* "View Code on GitHub" on project pages */
+
+.project-actions {
+    margin-top: 30px;
+}
+
+@media (max-width: 760px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
