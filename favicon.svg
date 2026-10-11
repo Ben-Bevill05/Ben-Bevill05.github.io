@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#B3263E"/><text x="32" y="43" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="30" fill="#F7F5F0" letter-spacing="-2">BB</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0D2438"/>
+  <text x="32" y="38" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="28" fill="#FFFFFF" letter-spacing="-1.5">BB</text>
+  <g transform="translate(8 48)">
+    <rect width="9" height="4" fill="#C8102E"/><rect x="9" width="3" height="4" fill="#FFFFFF"/>
+    <rect x="12" width="9" height="4" fill="#5B8FD1"/><rect x="21" width="3" height="4" fill="#FFFFFF"/>
+    <rect x="24" width="9" height="4" fill="#C8102E"/><rect x="33" width="3" height="4" fill="#FFFFFF"/>
+    <rect x="36" width="12" height="4" fill="#5B8FD1"/>
+  </g>
+</svg>
