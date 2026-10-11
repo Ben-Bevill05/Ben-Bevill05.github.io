@@ -929,11 +929,10 @@ html {
 
 .lane {
     position: relative;
-    display: grid;
-    grid-template-columns: 26px 9.5rem 1fr;
-    align-items: center;
-    gap: 18px;
-    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 26px 32px;
     color: #fff;
     text-decoration: none;
 }
@@ -963,7 +962,7 @@ html {
 }
 
 .lane-stat {
-    font-size: clamp(38px, 4.2vw, 54px);
+    font-size: clamp(30px, 3.2vw, 40px);
     font-weight: 800;
     font-stretch: 70%;
     font-variation-settings: "wdth" 70;
@@ -976,7 +975,7 @@ html {
     font-size: 15px;
     line-height: 1.4;
     color: #C9D7E6;
-    max-width: 22em;
+    max-width: 30em;
 }
 
 .lane:hover .lane-label,
@@ -1285,13 +1284,7 @@ html {
 @media (max-width: 520px) {
 
     .lane {
-        grid-template-columns: 22px 1fr;
-        gap: 4px 12px;
-        padding: 20px;
-    }
-
-    .lane-label {
-        grid-column: 2;
+        padding: 22px;
     }
 
     .hero h1 {
