@@ -105,12 +105,21 @@ nav {
 }
 
 .logo {
-    font-family: var(--serif);
-    color: var(--text);
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
-    font-size: 21px;
-    font-weight: 700;
-    letter-spacing: 0;
+    line-height: 0;
+}
+
+.logo img {
+    display: block;
+    height: 30px;
+    width: auto;
+    transition: opacity 0.2s ease;
+}
+
+.logo:hover img {
+    opacity: 0.82;
 }
 
 .nav-links {
