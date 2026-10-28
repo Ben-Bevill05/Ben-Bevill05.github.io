@@ -17,6 +17,9 @@
     --accent: #1D3A5F;
     --accent-hover: #142B47;
     --accent-soft: #E8EDF3;
+    --warm: #B8572B;          /* copper — used sparingly */
+    --warm-soft: #F6E9E1;
+    --deep: #14263D;
     --border: #E2E2DC;
     --border-strong: #C9CBC4;
 
@@ -803,6 +806,208 @@ footer {
     border-top: 1px solid var(--border);
     font-size: 13px;
     color: var(--muted);
+}
+
+
+/* =========================================================
+   ACCENTS ("a little spice")
+   ========================================================= */
+
+/* Hero: faint graph-paper grid that fades out */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: calc(50% - 50vw);
+    right: calc(50% - 50vw);
+    background-image:
+        linear-gradient(to right, rgba(29, 58, 95, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(29, 58, 95, 0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 30%, transparent 100%);
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 22px;
+    padding: 6px 12px 6px 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--body);
+}
+
+.status-pill::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2E8B57;
+    box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.18);
+}
+
+.hero h1 .dot {
+    color: var(--warm);
+}
+
+/* At-a-glance card in deep navy */
+
+.board {
+    background: var(--deep);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 18px 40px -18px rgba(20, 38, 61, 0.45);
+    overflow: hidden;
+}
+
+.lane {
+    color: #fff;
+}
+
+.lane + .lane {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lane:hover,
+.lane:focus-visible {
+    background: rgba(255, 255, 255, 0.04);
+    border-left-color: var(--warm);
+}
+
+.lane-stat {
+    color: #fff;
+}
+
+.lane-label {
+    color: #A9B9CC;
+}
+
+/* Small copper rule above homepage section headings */
+
+#about h2::before,
+#skills h2::before,
+#projects h2::before,
+#experience h2::before,
+#contact h2::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 3px;
+    background: var(--warm);
+    margin-bottom: 18px;
+}
+
+/* Numbered projects */
+
+#projects {
+    counter-reset: project;
+}
+
+.project-row {
+    counter-increment: project;
+}
+
+.project-body::before {
+    content: counter(project, decimal-leading-zero);
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--warm);
+}
+
+.project-thumb {
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-thumb:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px -16px rgba(20, 38, 61, 0.35);
+}
+
+.project-link::after {
+    display: inline-block;
+    transition: transform 0.15s ease;
+}
+
+.project-link:hover::after {
+    transform: translateX(3px);
+}
+
+/* Experience on a deep navy band */
+
+.band-deep {
+    --band-bg: var(--deep);
+    color: #C9D5E3;
+}
+
+.band-deep h2,
+.band-deep h3 {
+    color: #fff;
+}
+
+.band-deep .experience-item {
+    border-top-color: rgba(255, 255, 255, 0.14);
+}
+
+.band-deep .experience-item:last-child {
+    border-bottom-color: rgba(255, 255, 255, 0.14);
+}
+
+.band-deep .experience-role p {
+    color: #8FA6C1;
+}
+
+.band-deep .experience-detail p {
+    color: #C9D5E3;
+}
+
+.band-deep .titles span {
+    background: transparent;
+    border-color: rgba(232, 160, 120, 0.55);
+    color: #F2C6AC;
+}
+
+/* Case study pages: copper section numbers and finding marker */
+
+.case-section .section-label,
+.project-hero .eyebrow {
+    color: var(--warm);
+}
+
+.large-takeaway {
+    border-left-color: var(--warm);
+}
+
+.stat-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px -16px rgba(20, 38, 61, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-thumb:hover,
+    .stat-card:hover,
+    .project-link:hover::after {
+        transform: none;
+    }
 }
 
 
