@@ -194,9 +194,7 @@ nav {
 /* Resume: copper so it stands apart from the navy actions */
 
 .resume-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    display: inline-block;
     padding: 11px 20px;
     border-radius: 4px;
     background: var(--warm);
@@ -214,15 +212,6 @@ nav {
     border-color: #9E4822;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(184, 87, 43, 0.28);
-}
-
-.resume-button svg {
-    flex-shrink: 0;
-    transition: transform 0.15s ease;
-}
-
-.resume-button:hover svg {
-    transform: translateY(1px);
 }
 
 .nav-links a.nav-resume {
